@@ -4,8 +4,9 @@
              x:Class="CalculatorApp.MainPage">
 
     <ScrollView>
-        <Grid>
+        <Grid ColumnSpacing="4" RowSpacing="4" Padding="16">
             <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
@@ -19,164 +20,206 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <Label
+            <!-- this is row 0-->
+            <Label 
                 Grid.Row="0"
-                Grid.Column="3"
+                Grid.ColumnSpan="4"
+                Text="1"
+                x:Name="ResultCalculation"
+                FontSize="Large"
+                HorizontalTextAlignment="End"/>
+            <!-- this is row 1-->
+            <Label
+                Grid.Row="1"
+                Grid.ColumnSpan="4"
                 Text="0"
                 x:Name="CurrentCalculation"
                 FontSize="Large"
                 HorizontalTextAlignment="End"/>
+            <!-- this is row 2-->
             <Button
-                Grid.Row="1"
+                Grid.Row="2"
                 Grid.Column="0"
                 x:Name="ClearBtn"
                 Text="C"
+                FontSize="50"
                 SemanticProperties.Hint="Clears the view area."
                 Clicked="ClearClicked"
                  />
             <Button
-                Grid.Row="1"
+                Grid.Row="2"
                 Grid.Column="1"
                 x:Name="PosNegBtn"
                 Text="+/-"
+                FontSize="50"
                 SemanticProperties.Hint=""
                 Clicked="PosNegClicked"
                 />
             <Button
-                Grid.Row="1"
+                Grid.Row="2"
                 Grid.Column="2"
                 x:Name="PercentageBtn"
                 Text="%"
+                FontSize="50"
                 SemanticProperties.Hint=""
                 Clicked="PercentageClicked"
                  />
             <Button
-                Grid.Row="1"
+                Grid.Row="2"
                 Grid.Column="3"
                 x:Name="DivideBtn"
                 Text="/"
+                FontSize="50"
                 SemanticProperties.Hint=""
-                Clicked="DivideClicked"
+                Clicked="OperatorClicked"
                  />
+            <!-- this is row 3-->
             <Button
-                Grid.Row="2"
+                Grid.Row="3"
                 Grid.Column="0"
                 x:Name="SevenBtn"
                 Text="7"
+                FontSize="50"
                 SemanticProperties.Hint=""
-                Clicked="SevenClicked"
+                Clicked="NumberClicked"
                  />
             <Button
-                Grid.Row="2"
+                Grid.Row="3"
                 Grid.Column="1"
                 x:Name="EightBtn"
                 Text="8"
+                FontSize="50"
                 SemanticProperties.Hint=""
-                Clicked="EightClicked"
+                Clicked="NumberClicked"
                  />
             <Button
-                Grid.Row="2"
+                Grid.Row="3"
                 Grid.Column="2"
                 x:Name="NineBtn"
                 Text="9"
+                FontSize="50"
                 SemanticProperties.Hint=""
-                Clicked="NineClicked"
+                Clicked="NumberClicked"
                  />
             <Button
                 Grid.Row="3"
+                Grid.Column="3"
+                x:Name="MultiplyBtn"
+                Text="*"
+                FontSize="50"
+                SemanticProperties.Hint=""
+                Clicked="OperatorClicked"
+                 />
+            <!-- this is row 4-->
+            <Button
+                Grid.Row="4"
                 Grid.Column="0"
                 x:Name="FourBtn"
                 Text="4"
+                FontSize="50"
                 SemanticProperties.Hint=""
-                Clicked="FourClicked"
+                Clicked="NumberClicked"
                  />
             <Button
                 Grid.Row="4"
-                Grid.Column="2"
-                x:Name="ThreeBtn"
-                Text="3"
-                SemanticProperties.Hint=""
-                Clicked="ThreeClicked"
-                 />
-            <Button
-                Grid.Row="4"
-                Grid.Column="1"
-                x:Name="TwoBtn"
-                Text="2"
-                SemanticProperties.Hint=""
-                Clicked="TwoClicked"
-                 />
-            <Button
-                Grid.Row="4"
-                Grid.Column="0"
-                x:Name="OneBtn"
-                Text="1"
-                SemanticProperties.Hint=""
-                Clicked="OneClicked"
-                 />
-            <Button
-                Grid.Row="3"
                 Grid.Column="1"
                 x:Name="FiveBtn"
                 Text="5"
+                FontSize="50"
                 SemanticProperties.Hint=""
-                Clicked="FiveClicked"
+                Clicked="NumberClicked"
                  />
             <Button
-                Grid.Row="3"
+                Grid.Row="4"
                 Grid.Column="2"
                 x:Name="SixBtn"
                 Text="6"
+                FontSize="50"
                 SemanticProperties.Hint=""
-                Clicked="SixClicked"
-                 />
-            <Button
-                Grid.Row="2"
-                Grid.Column="3"
-                x:Name="MultiplyBtn"
-                Text="X"
-                SemanticProperties.Hint=""
-                Clicked="MultiplyClicked"
-                 />
-            <Button
-                Grid.Row="3"
-                Grid.Column="3"
-                x:Name="MinusBtn"
-                Text="-"
-                SemanticProperties.Hint=""
-                Clicked="MinusClicked"
+                Clicked="NumberClicked"
                  />
             <Button
                 Grid.Row="4"
                 Grid.Column="3"
-                x:Name="PlusBtn"
-                Text="+"
+                x:Name="MinusBtn"
+                Text="-"
+                FontSize="50"
                 SemanticProperties.Hint=""
-                Clicked="PlusClicked"
+                Clicked="OperatorClicked"
+                 />
+            <!-- this is row 5-->
+            <Button
+                Grid.Row="5"
+                Grid.Column="0"
+                x:Name="OneBtn"
+                Text="1"
+                FontSize="50"
+                SemanticProperties.Hint=""
+                Clicked="NumberClicked"
                  />
             <Button
                 Grid.Row="5"
-                Grid.Column="3"
-                x:Name="EqualBtn"
-                Text="="
+                Grid.Column="1"
+                x:Name="TwoBtn"
+                Text="2"
+                FontSize="50"
                 SemanticProperties.Hint=""
-                Clicked="EqualClicked"
+                Clicked="NumberClicked"
                  />
             <Button
                 Grid.Row="5"
                 Grid.Column="2"
+                x:Name="ThreeBtn"
+                Text="3"
+                FontSize="50"
+                SemanticProperties.Hint=""
+                Clicked="NumberClicked"
+                 />
+            <Button
+                Grid.Row="5"
+                Grid.Column="3"
+                x:Name="PlusBtn"
+                Text="+"
+                FontSize="50"
+                SemanticProperties.Hint=""
+                Clicked="OperatorClicked"
+                 />
+            <!-- this is row 7-->
+            <Button
+                Grid.Row="7"
+                Grid.Column="0"
+                x:Name="DoubleZeroBtn"
+                Text="00"
+                FontSize="50"
+                SemanticProperties.Hint=""
+                Clicked="NumberClicked"
+                />
+            <Button
+                Grid.Row="7"
+                Grid.Column="1"
+                x:Name="ZeroBtn"
+                Text="0"
+                FontSize="50"
+                SemanticProperties.Hint=""
+                Clicked="NumberClicked"
+                 />
+            <Button
+                Grid.Row="7"
+                Grid.Column="2"
                 x:Name="DecimalBtn"
                 Text="."
+                FontSize="50"
                 SemanticProperties.Hint=""
                 Clicked="DecimalClicked"
                  />
             <Button
-                Grid.Row="5"
-                Grid.Column="1"
-                x:Name="ZeroBtn"
-                Text="0"
+                Grid.Row="7"
+                Grid.Column="3"
+                x:Name="EqualBtn"
+                Text="="
+                FontSize="50"
                 SemanticProperties.Hint=""
-                Clicked="ZeroClicked"
+                Clicked="EqualClicked"
                  />
         </Grid>
     </ScrollView>
