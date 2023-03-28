@@ -24,7 +24,7 @@
             <Label 
                 Grid.Row="0"
                 Grid.ColumnSpan="4"
-                Text="1"
+                Text=""
                 x:Name="ResultCalculation"
                 FontSize="Large"
                 HorizontalTextAlignment="End"/>
@@ -32,7 +32,7 @@
             <Label
                 Grid.Row="1"
                 Grid.ColumnSpan="4"
-                Text="0"
+                Text=""
                 x:Name="CurrentCalculation"
                 FontSize="Large"
                 HorizontalTextAlignment="End"/>
